@@ -6,8 +6,8 @@
 <p>接下来按照提示一步一步完成密码设置。</p>
 <p>最终默认会在C:\Users\username\.ssh下生成两个文件，id_rsa是私钥，id_public是公钥。</p>
 <p>在下图的位置输入用户名，再把id_public的内容复制粘贴即可。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fwlza7rsmxj319c0numzq.jpg" width="600" height="256"></p>
-<h4 id="设置允许SSH"><a href="#设置允许SSH" class="headerlink" title="设置允许SSH"></a>设置允许SSH</h4><p>需要注意的是，创建虚拟机的时候需要设置允许公共入站端口为SSH，不然接下来你会发现SSH怎么也连不上。(手动狗头)</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fwmnvmqjlkj319w0n8wh0.jpg" width="600" height="256"></p>
+<h4 id="设置允许SSH连接"><a href="#设置允许SSH连接" class="headerlink" title="设置允许SSH连接"></a>设置允许SSH连接</h4><p>需要注意的是，创建虚拟机的时候需要设置允许公共入站端口为SSH，不然接下来你会发现SSH怎么也连不上。(手动狗头)</p>
 <p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fwlzbl23mgj316o0deq53.jpg" width="700/"></p>
 <h3 id="0x01-打开防火墙"><a href="#0x01-打开防火墙" class="headerlink" title="0x01 打开防火墙"></a>0x01 打开防火墙</h3><p>在侧边栏选择设置-网络，可以看到如下图，入站规则中有一条是我们初始化添加的用于SSH端口。但是还不够，需要再开一个用于ss通信的端口。</p>
 <p>选择“添加入站规则”，端口号可以为1-65525中的任何一个，但是不能和已有端口冲突。我这里设置的端口号是443，最好添加TCP和UDP两种协议。</p>
